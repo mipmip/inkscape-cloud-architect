@@ -14,7 +14,11 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"><title
+     id="title1179">AWS Multi AZ Web Application</title><sodipodi:namedview
      id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -26,7 +30,7 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.70710678"
-     inkscape:cx="813.1728"
+     inkscape:cx="528.20877"
      inkscape:cy="780.64589"
      inkscape:window-width="2560"
      inkscape:window-height="1374"
@@ -469,7 +473,8 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="VPC"
-     style="display:inline"><rect
+     style="display:inline"
+     sodipodi:insensitive="true"><rect
        style="fill:none;stroke:#8c4fff;stroke-width:0.5;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect16021"
        width="245.57416"
@@ -851,4 +856,13 @@
        d="M 222.28071,111.3844 V 92.82143 h -40.5182"
        id="path26231"
        sodipodi:nodetypes="ccc"
-       transform="translate(19.244497)" /></g></svg>
+       transform="translate(19.244497)" /></g><metadata
+     id="metadata965"><rdf:RDF><cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/"><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /></cc:License><cc:Work
+         rdf:about=""><cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" /><dc:title>AWS Multi AZ Web Application</dc:title><dc:creator><cc:Agent><dc:title>Pim Snel</dc:title></cc:Agent></dc:creator><dc:source>https://github.com/mipmip/inkscape-cloud-architect</dc:source><dc:description>AWS Multi AZ Web Application template. Showing Route 53, CloudFront, Auto Scaling Group, RDS, Load Balancer, VPC and S3</dc:description></cc:Work></rdf:RDF></metadata></svg>
