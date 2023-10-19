@@ -2,19 +2,30 @@
 
 Make Inkscape a professional Cloud Visualization Studio for Cloud Architects.
 
-_We can do better than all that expensie online crap editors_ 😎
+_We can do better than all that expensive online crap editors_ 😎
+
+## Includes
+
+- AWS Symbol Sets
+- AWS Diagram Templates
 
 ![All AWS symbols](docs/images/all-symbols2.png)
 
 ![Multi AZ Web Application Template](docs/images/multi-az-webapp-tpl.png)
 
-## Usage (tested on linux only)
+## Install (tested on linux only)
+
+Clone repo.
 
 Build symbols and install all symbols and templates in current users inkscape folder.
 
 ```
+git clone https://github.com/mipmip/inkscape-cloud-architect
+cd inkscape-cloud-architect
 make all
 ```
+
+## Remove
 
 Remove all install assets:
 
@@ -22,10 +33,16 @@ Remove all install assets:
 make clean
 ```
 
-## Features
+## Usage
 
-- Install AWS Symbol Sets
-- Install AWS Diagram Templates
+### Using templates
+
+Click `New from template` in File menu and search for `AWS`.
+
+### Using Symbols
+
+Open the symbols tab and select an AWS panel. You can also select all symbols
+and then search for specific AWS symbols. Eg. `NAT`.
 
 ## Future
 
