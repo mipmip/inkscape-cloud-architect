@@ -1,8 +1,8 @@
 # Inkscape Cloud Architect
 
-Make Inkscape a professional Cloud Visualization Studio for Cloud Architects.
-
 _We can do better than all that expensive online crap editors_ 😎
+
+Make Inkscape a professional Cloud Visualization Studio for Cloud Architects.
 
 ## Includes
 
