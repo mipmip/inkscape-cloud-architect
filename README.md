@@ -1,7 +1,12 @@
 # Inkscape Cloud Architect
 
-This project strives to make Inkscape a professional Cloud Visualization Studio
-for Cloud Architects.
+Make Inkscape a professional Cloud Visualization Studio for Cloud Architects.
+
+_We can do better than all that expensie online crap editors_ 😎
+
+![All AWS symbols](docs/images/all-symbols2.png)
+
+![Multi AZ Web Application Template](docs/images/multi-az-webapp-tpl.png)
 
 ## Usage (tested on linux only)
 
