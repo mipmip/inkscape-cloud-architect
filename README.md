@@ -55,3 +55,5 @@ and then search for specific AWS symbols. Eg. `NAT`.
 ## Disclaimer
 
 Icons are downloaded from AWS and AWS is copyright owner of these icons.
+
+_sponsored by [TechNative](https://technative.eu)_
