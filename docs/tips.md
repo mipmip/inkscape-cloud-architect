@@ -35,7 +35,7 @@ How is works:
 
 2. With you mouse do a short click at the starting point (can always be moved)
 
-3. Keep the <kbd>CTRL</kbd> pressed while moving your mouse to the destination. The <kbd>CTRL</kbd> makes it easier to create 100% horizontal or 100 vertical lines.
+3. Keep the <kbd>CTRL</kbd>+<kbd>Shift</kbd> keys pressed while moving your mouse to the destination. The <kbd>CTRL</kbd>+<kbd>Shift</kbd> keys makes it easier to create 100% horizontal or 100 vertical lines.
 
 5. At destination do another short click.
 
