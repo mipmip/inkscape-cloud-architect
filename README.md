@@ -11,7 +11,7 @@ Make Inkscape a professional Cloud Visualization Studio for Cloud Architects.
 
 ![All AWS symbols](docs/images/all-symbols2.png)
 
-![Multi AZ Web Application Template](docs/images/multi-az-webapp-tpl-v2.png)
+![Multi AZ Web Application Template](docs/images/multi-az-webapp-tpl-v2.png).
 
 ## Install
 
