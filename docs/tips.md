@@ -4,9 +4,10 @@
 
 - <kbd>Esc</kbd> Deselect
 - <kbd>S</kbd> Select object mode. E.g. for dragging or scaling subnets.
-- <kbd>N</kbd> Select nodes mode. This is userful for manipulating lines with arrows.
+- <kbd>N</kbd> Select nodes mode. This is userful for manipulating rectangles and lines with arrows.
 - <kbd>B</kbd> Draw lines. Use this to draw lines and arrows.
-
+- <kbd>T</kbd> Create or Edit Text's.
+ 
 ### Disable Automatic Stroke width and corner radius
 
 You don't want to border widths to scale when you change subnets etc...
@@ -23,7 +24,6 @@ diagramming the `Fill and Stroke` and `Layer` panels our often used.
 ### Inkscape has dark theme's
 
 For all you vampires out there... Inkscape has dark mode themes.
-
 
 ### Lines with straigh corners and arrows
 
