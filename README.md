@@ -53,7 +53,7 @@ Inkscape is a vector drawing application which can have many purposes. Read thes
 - Connect to AWS to visialize live cloud environments.
 - Instance Types
 - Azure
-- Install scripts for macOS
+- better dark mode supprt
 - Install scripts for Windows
 
 ## Disclaimer
