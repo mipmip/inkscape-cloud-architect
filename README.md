@@ -44,9 +44,9 @@ Click `New from template` in File menu and search for `AWS`.
 Open the symbols tab and select an AWS panel. You can also select all symbols
 and then search for specific AWS symbols. Eg. `NAT`.
 
-### Inkscape tips for diagramming
+### 💡 Tips for diagramming with Inkscape
 
-Inkscape is a vector drawing application which can have many purposes. Read these [tips to optimize your Inkscape workflow](docs/tips.md) for creating Cloud Diagrams.
+Inkscape is a vector drawing application which can have many purposes. Read these tips to [optimize your Inkscape workflow](docs/tips.md) for creating Cloud Diagrams.
 
 ## Future
 
