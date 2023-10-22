@@ -50,7 +50,7 @@ for dir in build/Resource*/*; do
     #darkfiles=$dir/Res_48_Dark/*.svg
   fi
 
-  python files_to_svg.py "Resource $componentname" target/AWS-Resource-$componentname-light.svg $lightfiles
+  python3 files_to_svg.py "Resource $componentname" target/AWS-Resource-$componentname-light.svg $lightfiles
   #python files_to_svg.py "Resource $componentname-dark" target/aws-$componentname-resource-dark.svg $darkfiles
 done
 
@@ -58,20 +58,20 @@ for dir in build/Architecture-Service*/*; do
   componentname=$(basename $dir | sed 's/^Arch_//' | tr 'A-Z_' 'a-z-')
   echo $dir
   files=$dir/*48/*.svg
-  python files_to_svg.py "Service $componentname" target/AWS-Service-$componentname.svg $files
+  python3 files_to_svg.py "Service $componentname" target/AWS-Service-$componentname.svg $files
 done
 
 for dir in build/Category*/Arch-Category_48; do
   echo $dir
   componentname=$(basename $dir | sed 's/^Arch_//' | tr 'A-Z_' 'a-z-')
   files=$dir/*.svg
-  python files_to_svg.py "Category $componentname" target/AWS-Category-$componentname.svg $files
+  python3 files_to_svg.py "Category $componentname" target/AWS-Category-$componentname.svg $files
 done
 
 for dir in build/Groups/*; do
   echo $dir
   componentname=$(basename $dir | sed 's/^Arch_//' | tr 'A-Z_' 'a-z-')
   files=$dir/*.svg
-  python files_to_svg.py "Group $componentname" target/AWS-Group-$componentname.svg $files
+  python3 files_to_svg.py "Group $componentname" target/AWS-Group-$componentname.svg $files
 done
 
