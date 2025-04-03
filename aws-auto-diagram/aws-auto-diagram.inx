@@ -2,6 +2,19 @@
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
 <name>aws-auto-diagram</name>
   <id>org.inkscape.tutorial.square</id>
+
+  <!--
+  <param name="tab" type="notebook">
+    <page name="controls" gui-text="Controls">
+      <param name="{argumentName}" type="[int|float|string|bool]" min="{number}" max="{number}"
+        gui-text="{Friendly Argument Name}">{default value}</param>
+    </page>
+    <page name="help" gui-text="Help">
+      <param name="help_text" type="description">{Friendly Extension Help}</param>
+    </page>
+  </param>
+  -->
+
   <effect>
     <effects-menu>
       <submenu name="AWS Auto Diagram"/>

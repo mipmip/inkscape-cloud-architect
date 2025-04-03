@@ -1,0 +1,4408 @@
+[
+    {
+        "data": {
+            "id": "arn:aws:::975050051976:",
+            "name": "technative-nonproduction",
+            "type": "account",
+            "local_id": "975050051976",
+            "node_data": {
+                "id": "975050051976",
+                "name": "technative-nonproduction",
+                "default": true
+            }
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:",
+            "name": "eu-central-1",
+            "type": "region",
+            "local_id": "eu-central-1",
+            "node_data": {
+                "Endpoint": "ec2.eu-central-1.amazonaws.com",
+                "OptInStatus": "opt-in-not-required",
+                "RegionName": "eu-central-1"
+            },
+            "parent": "arn:aws:::975050051976:"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721",
+            "name": "main (10.0.0.0/16)",
+            "type": "vpc",
+            "local_id": "vpc-0fce2371516f3b721",
+            "node_data": {
+                "BlockPublicAccessStates": {
+                    "InternetGatewayBlockMode": "off"
+                },
+                "CidrBlock": "10.0.0.0/16",
+                "CidrBlockAssociationSet": [
+                    {
+                        "AssociationId": "vpc-cidr-assoc-0f4ce7bffc3fda511",
+                        "CidrBlock": "10.0.0.0/16",
+                        "CidrBlockState": {
+                            "State": "associated"
+                        }
+                    }
+                ],
+                "DhcpOptionsId": "dopt-02a08689d2773e016",
+                "InstanceTenancy": "default",
+                "IsDefault": false,
+                "OwnerId": "975050051976",
+                "State": "available",
+                "Tags": [
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    },
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-internal-tools"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "main"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    }
+                ],
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721/az/eu-central-1a",
+            "name": "eu-central-1a",
+            "type": "az",
+            "local_id": "eu-central-1a",
+            "node_data": {
+                "GroupName": "eu-central-1-zg-1",
+                "Messages": [],
+                "NetworkBorderGroup": "eu-central-1",
+                "OptInStatus": "opt-in-not-required",
+                "RegionName": "eu-central-1",
+                "State": "available",
+                "ZoneId": "euc1-az2",
+                "ZoneName": "eu-central-1a",
+                "ZoneType": "availability-zone"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:subnet/subnet-07d5ffd5db4da2d5a",
+            "name": "public_az1 (10.0.0.0/22)",
+            "type": "subnet",
+            "local_id": "subnet-07d5ffd5db4da2d5a",
+            "node_data": {
+                "AssignIpv6AddressOnCreation": false,
+                "AvailabilityZone": "eu-central-1a",
+                "AvailabilityZoneId": "euc1-az2",
+                "AvailableIpAddressCount": 1011,
+                "BlockPublicAccessStates": {
+                    "InternetGatewayBlockMode": "off"
+                },
+                "CidrBlock": "10.0.0.0/22",
+                "DefaultForAz": false,
+                "EnableDns64": false,
+                "Ipv6CidrBlockAssociationSet": [],
+                "Ipv6Native": false,
+                "MapCustomerOwnedIpOnLaunch": false,
+                "MapPublicIpOnLaunch": false,
+                "OwnerId": "975050051976",
+                "PrivateDnsNameOptionsOnLaunch": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "State": "available",
+                "SubnetArn": "arn:aws:ec2:eu-central-1:975050051976:subnet/subnet-07d5ffd5db4da2d5a",
+                "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                "Tags": [
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "public_az1"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    },
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-internal-tools"
+                    }
+                ],
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721/az/eu-central-1a"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "name": "ec2-compute1-nonprod-975050051976",
+            "type": "ec2",
+            "local_id": "i-01050d2791f739e2d",
+            "node_data": {
+                "AmiLaunchIndex": 0,
+                "Architecture": "x86_64",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/xvda",
+                        "Ebs": {
+                            "AttachTime": "2025-02-27T12:34:18+00:00",
+                            "DeleteOnTermination": true,
+                            "Status": "attached",
+                            "VolumeId": "vol-0bd0014864245245a"
+                        }
+                    },
+                    {
+                        "DeviceName": "/dev/xvdb",
+                        "Ebs": {
+                            "AttachTime": "2025-02-27T12:35:55.596000+00:00",
+                            "DeleteOnTermination": false,
+                            "Status": "attached",
+                            "VolumeId": "vol-07658bf7cd7832224"
+                        }
+                    }
+                ],
+                "CapacityReservationSpecification": {
+                    "CapacityReservationPreference": "open"
+                },
+                "ClientToken": "terraform-20250227123417254700000002",
+                "CpuOptions": {
+                    "CoreCount": 1,
+                    "ThreadsPerCore": 2
+                },
+                "CurrentInstanceBootMode": "legacy-bios",
+                "EbsOptimized": false,
+                "EnaSupport": true,
+                "EnclaveOptions": {
+                    "Enabled": false
+                },
+                "HibernationOptions": {
+                    "Configured": false
+                },
+                "Hypervisor": "xen",
+                "IamInstanceProfile": {
+                    "Arn": "arn:aws:iam::975050051976:instance-profile/ec2_compute1-975050051976-ec2-profile",
+                    "Id": "AIPA6GBMDCGEAUXB5WFF4"
+                },
+                "ImageId": "ami-04614a2ff59152144",
+                "InstanceId": "i-01050d2791f739e2d",
+                "InstanceType": "t3.small",
+                "LaunchTime": "2025-03-19T10:19:45+00:00",
+                "MaintenanceOptions": {
+                    "AutoRecovery": "default"
+                },
+                "MetadataOptions": {
+                    "HttpEndpoint": "enabled",
+                    "HttpProtocolIpv6": "disabled",
+                    "HttpPutResponseHopLimit": 1,
+                    "HttpTokens": "optional",
+                    "InstanceMetadataTags": "disabled",
+                    "State": "applied"
+                },
+                "Monitoring": {
+                    "State": "disabled"
+                },
+                "NetworkInterfaces": [
+                    {
+                        "Association": {
+                            "IpOwnerId": "amazon",
+                            "PublicDnsName": "ec2-18-192-239-57.eu-central-1.compute.amazonaws.com",
+                            "PublicIp": "18.192.239.57"
+                        },
+                        "Attachment": {
+                            "AttachTime": "2025-02-27T12:34:18+00:00",
+                            "AttachmentId": "eni-attach-09b06682a3dbc9b3b",
+                            "DeleteOnTermination": true,
+                            "DeviceIndex": 0,
+                            "NetworkCardIndex": 0,
+                            "Status": "attached"
+                        },
+                        "Description": "",
+                        "Groups": [
+                            {
+                                "GroupId": "sg-050b68c8fe09e8584",
+                                "GroupName": "terraform-20240606085609325700000002"
+                            }
+                        ],
+                        "InterfaceType": "interface",
+                        "Ipv6Addresses": [],
+                        "MacAddress": "02:31:ec:f1:af:1d",
+                        "NetworkInterfaceId": "eni-057336e99e6371864",
+                        "Operator": {
+                            "Managed": false
+                        },
+                        "OwnerId": "975050051976",
+                        "PrivateDnsName": "ip-10-0-0-64.eu-central-1.compute.internal",
+                        "PrivateIpAddress": "10.0.0.64",
+                        "PrivateIpAddresses": [
+                            {
+                                "Association": {
+                                    "IpOwnerId": "amazon",
+                                    "PublicDnsName": "ec2-18-192-239-57.eu-central-1.compute.amazonaws.com",
+                                    "PublicIp": "18.192.239.57"
+                                },
+                                "Primary": true,
+                                "PrivateDnsName": "ip-10-0-0-64.eu-central-1.compute.internal",
+                                "PrivateIpAddress": "10.0.0.64"
+                            }
+                        ],
+                        "SourceDestCheck": true,
+                        "Status": "in-use",
+                        "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                        "VpcId": "vpc-0fce2371516f3b721"
+                    }
+                ],
+                "NetworkPerformanceOptions": {
+                    "BandwidthWeighting": "default"
+                },
+                "Operator": {
+                    "Managed": false
+                },
+                "Placement": {
+                    "AvailabilityZone": "eu-central-1a",
+                    "GroupName": "",
+                    "Tenancy": "default"
+                },
+                "PlatformDetails": "Linux/UNIX",
+                "PrivateDnsName": "ip-10-0-0-64.eu-central-1.compute.internal",
+                "PrivateDnsNameOptions": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "PrivateIpAddress": "10.0.0.64",
+                "ProductCodes": [],
+                "PublicDnsName": "ec2-18-192-239-57.eu-central-1.compute.amazonaws.com",
+                "PublicIpAddress": "18.192.239.57",
+                "RootDeviceName": "/dev/xvda",
+                "RootDeviceType": "ebs",
+                "SecurityGroups": [
+                    {
+                        "GroupId": "sg-050b68c8fe09e8584",
+                        "GroupName": "terraform-20240606085609325700000002"
+                    }
+                ],
+                "SourceDestCheck": true,
+                "State": {
+                    "Code": 16,
+                    "Name": "running"
+                },
+                "StateTransitionReason": "",
+                "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "ec2-compute1-nonprod-975050051976"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "start-mon-fri-8am",
+                        "Value": "true"
+                    },
+                    {
+                        "Key": "Domain",
+                        "Value": "ec2_compute1-975050051976"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "hibernate-mon-fri-7pm",
+                        "Value": "true"
+                    },
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-workloads"
+                    }
+                ],
+                "UsageOperation": "RunInstances",
+                "UsageOperationUpdateTime": "2025-02-27T12:34:18+00:00",
+                "VirtualizationType": "hvm",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-07d5ffd5db4da2d5a"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "name": "ec2-asg-nat-main-eu-central-1a",
+            "type": "autoscaling",
+            "local_id": "ec2-asg-nat-main-eu-central-1a",
+            "node_data": {
+                "AmiLaunchIndex": 0,
+                "Architecture": "arm64",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/xvda",
+                        "Ebs": {
+                            "AttachTime": "2025-02-07T21:20:30+00:00",
+                            "DeleteOnTermination": true,
+                            "Status": "attached",
+                            "VolumeId": "vol-0c940b9947305a8e8"
+                        }
+                    }
+                ],
+                "BootMode": "uefi",
+                "CapacityReservationSpecification": {
+                    "CapacityReservationPreference": "open"
+                },
+                "ClientToken": "fleet-921da836-258e-662d-24b2-a9aa39654e24-0",
+                "CpuOptions": {
+                    "CoreCount": 2,
+                    "ThreadsPerCore": 1
+                },
+                "CurrentInstanceBootMode": "uefi",
+                "EbsOptimized": true,
+                "EnaSupport": true,
+                "EnclaveOptions": {
+                    "Enabled": false
+                },
+                "HibernationOptions": {
+                    "Configured": false
+                },
+                "Hypervisor": "xen",
+                "IamInstanceProfile": {
+                    "Arn": "arn:aws:iam::975050051976:instance-profile/ec2-asg-nat-main-eu-central-1a",
+                    "Id": "AIPA6GBMDCGED35P6NQLN"
+                },
+                "ImageId": "ami-05c519ee5eeea1fd6",
+                "InstanceId": "i-020e297809ec900fc",
+                "InstanceType": "t4g.nano",
+                "LaunchTime": "2025-02-07T21:20:30+00:00",
+                "MaintenanceOptions": {
+                    "AutoRecovery": "default"
+                },
+                "MetadataOptions": {
+                    "HttpEndpoint": "enabled",
+                    "HttpProtocolIpv6": "disabled",
+                    "HttpPutResponseHopLimit": 1,
+                    "HttpTokens": "required",
+                    "InstanceMetadataTags": "disabled",
+                    "State": "applied"
+                },
+                "Monitoring": {
+                    "State": "enabled"
+                },
+                "NetworkInterfaces": [
+                    {
+                        "Association": {
+                            "IpOwnerId": "975050051976",
+                            "PublicDnsName": "ec2-52-28-65-222.eu-central-1.compute.amazonaws.com",
+                            "PublicIp": "52.28.65.222"
+                        },
+                        "Attachment": {
+                            "AttachTime": "2025-02-07T21:20:30+00:00",
+                            "AttachmentId": "eni-attach-0a2bbc9beb8fa2436",
+                            "DeleteOnTermination": true,
+                            "DeviceIndex": 0,
+                            "NetworkCardIndex": 0,
+                            "Status": "attached"
+                        },
+                        "Description": "",
+                        "Groups": [
+                            {
+                                "GroupId": "sg-0e7c5b8f67a800d7a",
+                                "GroupName": "terraform-20240606132524252100000003"
+                            }
+                        ],
+                        "InterfaceType": "interface",
+                        "Ipv6Addresses": [],
+                        "MacAddress": "02:28:06:e1:79:37",
+                        "NetworkInterfaceId": "eni-0accbab8e453512ef",
+                        "Operator": {
+                            "Managed": false
+                        },
+                        "OwnerId": "975050051976",
+                        "PrivateDnsName": "ip-10-0-0-204.eu-central-1.compute.internal",
+                        "PrivateIpAddress": "10.0.0.204",
+                        "PrivateIpAddresses": [
+                            {
+                                "Association": {
+                                    "IpOwnerId": "975050051976",
+                                    "PublicDnsName": "ec2-52-28-65-222.eu-central-1.compute.amazonaws.com",
+                                    "PublicIp": "52.28.65.222"
+                                },
+                                "Primary": true,
+                                "PrivateDnsName": "ip-10-0-0-204.eu-central-1.compute.internal",
+                                "PrivateIpAddress": "10.0.0.204"
+                            }
+                        ],
+                        "SourceDestCheck": false,
+                        "Status": "in-use",
+                        "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                        "VpcId": "vpc-0fce2371516f3b721"
+                    }
+                ],
+                "NetworkPerformanceOptions": {
+                    "BandwidthWeighting": "default"
+                },
+                "Operator": {
+                    "Managed": false
+                },
+                "Placement": {
+                    "AvailabilityZone": "eu-central-1a",
+                    "GroupName": "",
+                    "Tenancy": "default"
+                },
+                "PlatformDetails": "Linux/UNIX",
+                "PrivateDnsName": "ip-10-0-0-204.eu-central-1.compute.internal",
+                "PrivateDnsNameOptions": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "PrivateIpAddress": "10.0.0.204",
+                "ProductCodes": [],
+                "PublicDnsName": "ec2-52-28-65-222.eu-central-1.compute.amazonaws.com",
+                "PublicIpAddress": "52.28.65.222",
+                "RootDeviceName": "/dev/xvda",
+                "RootDeviceType": "ebs",
+                "SecurityGroups": [
+                    {
+                        "GroupId": "sg-0e7c5b8f67a800d7a",
+                        "GroupName": "terraform-20240606132524252100000003"
+                    }
+                ],
+                "SourceDestCheck": false,
+                "State": {
+                    "Code": 16,
+                    "Name": "running"
+                },
+                "StateTransitionReason": "",
+                "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "ec2-asg-nat-main-eu-central-1a"
+                    },
+                    {
+                        "Key": "aws:autoscaling:groupName",
+                        "Value": "ec2-asg-nat-main-eu-central-1a"
+                    },
+                    {
+                        "Key": "AmazonECSManaged",
+                        "Value": ""
+                    },
+                    {
+                        "Key": "aws:ec2:fleet-id",
+                        "Value": "fleet-921da836-258e-662d-24b2-a9aa39654e24"
+                    },
+                    {
+                        "Key": "aws:ec2launchtemplate:version",
+                        "Value": "2"
+                    },
+                    {
+                        "Key": "aws:ec2launchtemplate:id",
+                        "Value": "lt-070128ebf149e145f"
+                    }
+                ],
+                "UsageOperation": "RunInstances",
+                "UsageOperationUpdateTime": "2025-02-07T21:20:30+00:00",
+                "VirtualizationType": "hvm",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-07d5ffd5db4da2d5a"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "name": "ec2-compute2-nonprod-975050051976",
+            "type": "ec2",
+            "local_id": "i-06e9e4a9d0f638964",
+            "node_data": {
+                "AmiLaunchIndex": 0,
+                "Architecture": "x86_64",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/xvda",
+                        "Ebs": {
+                            "AttachTime": "2025-03-19T14:06:13+00:00",
+                            "DeleteOnTermination": true,
+                            "Status": "attached",
+                            "VolumeId": "vol-08367cc3f0b1127b6"
+                        }
+                    },
+                    {
+                        "DeviceName": "/dev/xvdb",
+                        "Ebs": {
+                            "AttachTime": "2025-03-19T14:10:47.831000+00:00",
+                            "DeleteOnTermination": false,
+                            "Status": "attached",
+                            "VolumeId": "vol-0d954fd36c0b07571"
+                        }
+                    }
+                ],
+                "CapacityReservationSpecification": {
+                    "CapacityReservationPreference": "open"
+                },
+                "ClientToken": "terraform-20250319140612142200000002",
+                "CpuOptions": {
+                    "CoreCount": 1,
+                    "ThreadsPerCore": 2
+                },
+                "CurrentInstanceBootMode": "legacy-bios",
+                "EbsOptimized": false,
+                "EnaSupport": true,
+                "EnclaveOptions": {
+                    "Enabled": false
+                },
+                "HibernationOptions": {
+                    "Configured": false
+                },
+                "Hypervisor": "xen",
+                "IamInstanceProfile": {
+                    "Arn": "arn:aws:iam::975050051976:instance-profile/ec2_compute2-975050051976-ec2-profile",
+                    "Id": "AIPA6GBMDCGEP2DRVDE6N"
+                },
+                "ImageId": "ami-08ada2dd516d881ca",
+                "InstanceId": "i-06e9e4a9d0f638964",
+                "InstanceType": "t3.small",
+                "LaunchTime": "2025-03-19T14:06:13+00:00",
+                "MaintenanceOptions": {
+                    "AutoRecovery": "default"
+                },
+                "MetadataOptions": {
+                    "HttpEndpoint": "enabled",
+                    "HttpProtocolIpv6": "disabled",
+                    "HttpPutResponseHopLimit": 1,
+                    "HttpTokens": "optional",
+                    "InstanceMetadataTags": "disabled",
+                    "State": "applied"
+                },
+                "Monitoring": {
+                    "State": "disabled"
+                },
+                "NetworkInterfaces": [
+                    {
+                        "Association": {
+                            "IpOwnerId": "975050051976",
+                            "PublicDnsName": "ec2-18-184-71-72.eu-central-1.compute.amazonaws.com",
+                            "PublicIp": "18.184.71.72"
+                        },
+                        "Attachment": {
+                            "AttachTime": "2025-03-19T14:06:13+00:00",
+                            "AttachmentId": "eni-attach-0c770075efed13ed1",
+                            "DeleteOnTermination": true,
+                            "DeviceIndex": 0,
+                            "NetworkCardIndex": 0,
+                            "Status": "attached"
+                        },
+                        "Description": "",
+                        "Groups": [
+                            {
+                                "GroupId": "sg-04c98253e6566c6a2",
+                                "GroupName": "terraform-20240613083216612900000002"
+                            }
+                        ],
+                        "InterfaceType": "interface",
+                        "Ipv6Addresses": [],
+                        "MacAddress": "02:b8:31:60:3a:19",
+                        "NetworkInterfaceId": "eni-0323ff4bcadb588ea",
+                        "Operator": {
+                            "Managed": false
+                        },
+                        "OwnerId": "975050051976",
+                        "PrivateDnsName": "ip-10-0-2-7.eu-central-1.compute.internal",
+                        "PrivateIpAddress": "10.0.2.7",
+                        "PrivateIpAddresses": [
+                            {
+                                "Association": {
+                                    "IpOwnerId": "975050051976",
+                                    "PublicDnsName": "ec2-18-184-71-72.eu-central-1.compute.amazonaws.com",
+                                    "PublicIp": "18.184.71.72"
+                                },
+                                "Primary": true,
+                                "PrivateDnsName": "ip-10-0-2-7.eu-central-1.compute.internal",
+                                "PrivateIpAddress": "10.0.2.7"
+                            }
+                        ],
+                        "SourceDestCheck": true,
+                        "Status": "in-use",
+                        "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                        "VpcId": "vpc-0fce2371516f3b721"
+                    }
+                ],
+                "NetworkPerformanceOptions": {
+                    "BandwidthWeighting": "default"
+                },
+                "Operator": {
+                    "Managed": false
+                },
+                "Placement": {
+                    "AvailabilityZone": "eu-central-1a",
+                    "GroupName": "",
+                    "Tenancy": "default"
+                },
+                "PlatformDetails": "Linux/UNIX",
+                "PrivateDnsName": "ip-10-0-2-7.eu-central-1.compute.internal",
+                "PrivateDnsNameOptions": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "PrivateIpAddress": "10.0.2.7",
+                "ProductCodes": [],
+                "PublicDnsName": "ec2-18-184-71-72.eu-central-1.compute.amazonaws.com",
+                "PublicIpAddress": "18.184.71.72",
+                "RootDeviceName": "/dev/xvda",
+                "RootDeviceType": "ebs",
+                "SecurityGroups": [
+                    {
+                        "GroupId": "sg-04c98253e6566c6a2",
+                        "GroupName": "terraform-20240613083216612900000002"
+                    }
+                ],
+                "SourceDestCheck": true,
+                "State": {
+                    "Code": 16,
+                    "Name": "running"
+                },
+                "StateTransitionReason": "",
+                "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-workloads"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "ec2-compute2-nonprod-975050051976"
+                    },
+                    {
+                        "Key": "Domain",
+                        "Value": "ec2_compute2-975050051976"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "hibernate-mon-fri-7pm",
+                        "Value": "true"
+                    },
+                    {
+                        "Key": "start-mon-fri-8am",
+                        "Value": "true"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    }
+                ],
+                "UsageOperation": "RunInstances",
+                "UsageOperationUpdateTime": "2025-03-19T14:06:13+00:00",
+                "VirtualizationType": "hvm",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-07d5ffd5db4da2d5a"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-07d5ffd5db4da2d5a",
+            "name": "external-tn-tools",
+            "type": "elbv2",
+            "local_id": "external-tn-tools",
+            "node_data": {
+                "AvailabilityZones": [
+                    {
+                        "LoadBalancerAddresses": [],
+                        "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                        "ZoneName": "eu-central-1a"
+                    },
+                    {
+                        "LoadBalancerAddresses": [],
+                        "SubnetId": "subnet-090c2f3fc1f0c4f90",
+                        "ZoneName": "eu-central-1b"
+                    }
+                ],
+                "CanonicalHostedZoneId": "Z215JYRZR1TBD5",
+                "CreatedTime": "2024-06-06T13:29:03.270000+00:00",
+                "DNSName": "external-tn-tools-871201432.eu-central-1.elb.amazonaws.com",
+                "EnablePrefixForIpv6SourceNat": "off",
+                "IpAddressType": "ipv4",
+                "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:975050051976:loadbalancer/app/external-tn-tools/3d68241a4935b6de",
+                "LoadBalancerName": "external-tn-tools",
+                "Scheme": "internet-facing",
+                "SecurityGroups": [
+                    "sg-0beed24840a310e84"
+                ],
+                "State": {
+                    "Code": "active"
+                },
+                "Type": "application",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-07d5ffd5db4da2d5a"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:subnet/subnet-0986d849c9291374e",
+            "name": "private_az1 (10.0.12.0/22)",
+            "type": "subnet",
+            "local_id": "subnet-0986d849c9291374e",
+            "node_data": {
+                "AssignIpv6AddressOnCreation": false,
+                "AvailabilityZone": "eu-central-1a",
+                "AvailabilityZoneId": "euc1-az2",
+                "AvailableIpAddressCount": 1015,
+                "BlockPublicAccessStates": {
+                    "InternetGatewayBlockMode": "off"
+                },
+                "CidrBlock": "10.0.12.0/22",
+                "DefaultForAz": false,
+                "EnableDns64": false,
+                "Ipv6CidrBlockAssociationSet": [],
+                "Ipv6Native": false,
+                "MapCustomerOwnedIpOnLaunch": false,
+                "MapPublicIpOnLaunch": false,
+                "OwnerId": "975050051976",
+                "PrivateDnsNameOptionsOnLaunch": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "State": "available",
+                "SubnetArn": "arn:aws:ec2:eu-central-1:975050051976:subnet/subnet-0986d849c9291374e",
+                "SubnetId": "subnet-0986d849c9291374e",
+                "Tags": [
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "private_az1"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    },
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-internal-tools"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    }
+                ],
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721/az/eu-central-1a"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "name": "ec2-poormans-db-nonprod-975050051976",
+            "type": "ec2",
+            "local_id": "i-0ba9b0b568169fa71",
+            "node_data": {
+                "AmiLaunchIndex": 0,
+                "Architecture": "x86_64",
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "/dev/xvda",
+                        "Ebs": {
+                            "AttachTime": "2024-11-11T15:01:28+00:00",
+                            "DeleteOnTermination": true,
+                            "Status": "attached",
+                            "VolumeId": "vol-0298f73e9592c43ee"
+                        }
+                    },
+                    {
+                        "DeviceName": "/dev/xvdb",
+                        "Ebs": {
+                            "AttachTime": "2024-11-11T15:03:03+00:00",
+                            "DeleteOnTermination": false,
+                            "Status": "attached",
+                            "VolumeId": "vol-0aedda6df3805f8ec"
+                        }
+                    }
+                ],
+                "CapacityReservationSpecification": {
+                    "CapacityReservationPreference": "open"
+                },
+                "ClientToken": "terraform-20241111150127589400000001",
+                "CpuOptions": {
+                    "CoreCount": 1,
+                    "ThreadsPerCore": 2
+                },
+                "CurrentInstanceBootMode": "legacy-bios",
+                "EbsOptimized": false,
+                "EnaSupport": true,
+                "EnclaveOptions": {
+                    "Enabled": false
+                },
+                "HibernationOptions": {
+                    "Configured": false
+                },
+                "Hypervisor": "xen",
+                "IamInstanceProfile": {
+                    "Arn": "arn:aws:iam::975050051976:instance-profile/ec2_poormans_psql-975050051976-ec2-profile",
+                    "Id": "AIPA6GBMDCGEED7NA5VO2"
+                },
+                "ImageId": "ami-031cfe595144e3068",
+                "InstanceId": "i-0ba9b0b568169fa71",
+                "InstanceType": "t3.small",
+                "LaunchTime": "2025-03-28T09:57:40+00:00",
+                "MaintenanceOptions": {
+                    "AutoRecovery": "default"
+                },
+                "MetadataOptions": {
+                    "HttpEndpoint": "enabled",
+                    "HttpProtocolIpv6": "disabled",
+                    "HttpPutResponseHopLimit": 1,
+                    "HttpTokens": "optional",
+                    "InstanceMetadataTags": "disabled",
+                    "State": "applied"
+                },
+                "Monitoring": {
+                    "State": "disabled"
+                },
+                "NetworkInterfaces": [
+                    {
+                        "Attachment": {
+                            "AttachTime": "2024-11-11T15:01:28+00:00",
+                            "AttachmentId": "eni-attach-0cf30fcdc759468ff",
+                            "DeleteOnTermination": true,
+                            "DeviceIndex": 0,
+                            "NetworkCardIndex": 0,
+                            "Status": "attached"
+                        },
+                        "Description": "",
+                        "Groups": [
+                            {
+                                "GroupId": "sg-078662b50b38fbb9a",
+                                "GroupName": "terraform-20240530121745975200000002"
+                            }
+                        ],
+                        "InterfaceType": "interface",
+                        "Ipv6Addresses": [],
+                        "MacAddress": "02:64:63:d2:54:21",
+                        "NetworkInterfaceId": "eni-05fce2ed075ba07c4",
+                        "Operator": {
+                            "Managed": false
+                        },
+                        "OwnerId": "975050051976",
+                        "PrivateDnsName": "ip-10-0-15-175.eu-central-1.compute.internal",
+                        "PrivateIpAddress": "10.0.15.175",
+                        "PrivateIpAddresses": [
+                            {
+                                "Primary": true,
+                                "PrivateDnsName": "ip-10-0-15-175.eu-central-1.compute.internal",
+                                "PrivateIpAddress": "10.0.15.175"
+                            }
+                        ],
+                        "SourceDestCheck": true,
+                        "Status": "in-use",
+                        "SubnetId": "subnet-0986d849c9291374e",
+                        "VpcId": "vpc-0fce2371516f3b721"
+                    }
+                ],
+                "NetworkPerformanceOptions": {
+                    "BandwidthWeighting": "default"
+                },
+                "Operator": {
+                    "Managed": false
+                },
+                "Placement": {
+                    "AvailabilityZone": "eu-central-1a",
+                    "GroupName": "",
+                    "Tenancy": "default"
+                },
+                "PlatformDetails": "Linux/UNIX",
+                "PrivateDnsName": "ip-10-0-15-175.eu-central-1.compute.internal",
+                "PrivateDnsNameOptions": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "PrivateIpAddress": "10.0.15.175",
+                "ProductCodes": [],
+                "PublicDnsName": "",
+                "RootDeviceName": "/dev/xvda",
+                "RootDeviceType": "ebs",
+                "SecurityGroups": [
+                    {
+                        "GroupId": "sg-078662b50b38fbb9a",
+                        "GroupName": "terraform-20240530121745975200000002"
+                    }
+                ],
+                "SourceDestCheck": true,
+                "State": {
+                    "Code": 16,
+                    "Name": "running"
+                },
+                "StateTransitionReason": "",
+                "SubnetId": "subnet-0986d849c9291374e",
+                "Tags": [
+                    {
+                        "Key": "Domain",
+                        "Value": "ec2_poormans_psql-975050051976"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "ec2-poormans-db-nonprod-975050051976"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-workloads"
+                    }
+                ],
+                "UsageOperation": "RunInstances",
+                "UsageOperationUpdateTime": "2024-11-11T15:01:28+00:00",
+                "VirtualizationType": "hvm",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-0986d849c9291374e"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0579b1d1904b040f0.subnet-0986d849c9291374e",
+            "name": "api",
+            "type": "vpc_endpoint",
+            "local_id": "vpce-0579b1d1904b040f0",
+            "node_data": {
+                "CreationTimestamp": "2024-07-19T09:49:00.859000+00:00",
+                "DnsEntries": [
+                    {
+                        "DnsName": "vpce-0579b1d1904b040f0-n6743q9i.api.ecr.eu-central-1.vpce.amazonaws.com",
+                        "HostedZoneId": "Z273ZU8SZ5RJPC"
+                    },
+                    {
+                        "DnsName": "vpce-0579b1d1904b040f0-n6743q9i-eu-central-1a.api.ecr.eu-central-1.vpce.amazonaws.com",
+                        "HostedZoneId": "Z273ZU8SZ5RJPC"
+                    },
+                    {
+                        "DnsName": "api.ecr.eu-central-1.amazonaws.com",
+                        "HostedZoneId": "Z01775111U25MZB8SMK39"
+                    },
+                    {
+                        "DnsName": "ecr.eu-central-1.api.aws",
+                        "HostedZoneId": "Z02938153G188PUDGPLXM"
+                    }
+                ],
+                "DnsOptions": {
+                    "DnsRecordIpType": "ipv4"
+                },
+                "Groups": [
+                    {
+                        "GroupId": "sg-09a256626f184e112",
+                        "GroupName": "default"
+                    }
+                ],
+                "IpAddressType": "ipv4",
+                "NetworkInterfaceIds": [
+                    "eni-0e9fffbb1a6638d08"
+                ],
+                "OwnerId": "975050051976",
+                "PolicyDocument": "{\"Statement\":[{\"Action\":[\"ecr:GetDownloadUrlForLayer\",\"ecr:GetAuthorizationToken\",\"ecr:BatchGetImage\",\"ecr:BatchCheckLayerAvailability\"],\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::975050051976:root\"},\"Resource\":\"*\",\"Sid\":\"AllowPull\"}],\"Version\":\"2012-10-17\"}",
+                "PrivateDnsEnabled": true,
+                "RequesterManaged": false,
+                "RouteTableIds": [],
+                "ServiceName": "com.amazonaws.eu-central-1.ecr.api",
+                "State": "available",
+                "SubnetIds": [
+                    "subnet-0986d849c9291374e"
+                ],
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-workloads"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    }
+                ],
+                "VpcEndpointId": "vpce-0579b1d1904b040f0",
+                "VpcEndpointType": "Interface",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-0986d849c9291374e"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-07e78aa3dc4c6f61d.subnet-0986d849c9291374e",
+            "name": "dkr",
+            "type": "vpc_endpoint",
+            "local_id": "vpce-07e78aa3dc4c6f61d",
+            "node_data": {
+                "CreationTimestamp": "2024-07-19T09:49:00.874000+00:00",
+                "DnsEntries": [
+                    {
+                        "DnsName": "vpce-07e78aa3dc4c6f61d-9se4zgdg.dkr.ecr.eu-central-1.vpce.amazonaws.com",
+                        "HostedZoneId": "Z273ZU8SZ5RJPC"
+                    },
+                    {
+                        "DnsName": "vpce-07e78aa3dc4c6f61d-9se4zgdg-eu-central-1a.dkr.ecr.eu-central-1.vpce.amazonaws.com",
+                        "HostedZoneId": "Z273ZU8SZ5RJPC"
+                    },
+                    {
+                        "DnsName": "dkr.ecr.eu-central-1.amazonaws.com",
+                        "HostedZoneId": "Z07668787ZH40ECDV3OE"
+                    },
+                    {
+                        "DnsName": "*.dkr.ecr.eu-central-1.amazonaws.com",
+                        "HostedZoneId": "Z07668787ZH40ECDV3OE"
+                    },
+                    {
+                        "DnsName": "dkr-ecr.eu-central-1.on.aws",
+                        "HostedZoneId": "Z07738001CMFFXKY8ZLEW"
+                    },
+                    {
+                        "DnsName": "*.dkr-ecr.eu-central-1.on.aws",
+                        "HostedZoneId": "Z07738001CMFFXKY8ZLEW"
+                    }
+                ],
+                "DnsOptions": {
+                    "DnsRecordIpType": "ipv4"
+                },
+                "Groups": [
+                    {
+                        "GroupId": "sg-09a256626f184e112",
+                        "GroupName": "default"
+                    }
+                ],
+                "IpAddressType": "ipv4",
+                "NetworkInterfaceIds": [
+                    "eni-0837159bcfcfcd116"
+                ],
+                "OwnerId": "975050051976",
+                "PolicyDocument": "{\"Statement\":[{\"Action\":[\"ecr:GetDownloadUrlForLayer\",\"ecr:GetAuthorizationToken\",\"ecr:BatchGetImage\",\"ecr:BatchCheckLayerAvailability\"],\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"arn:aws:iam::975050051976:root\"},\"Resource\":\"*\",\"Sid\":\"AllowPull\"}],\"Version\":\"2012-10-17\"}",
+                "PrivateDnsEnabled": true,
+                "RequesterManaged": false,
+                "RouteTableIds": [],
+                "ServiceName": "com.amazonaws.eu-central-1.ecr.dkr",
+                "State": "available",
+                "SubnetIds": [
+                    "subnet-0986d849c9291374e"
+                ],
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-workloads"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    }
+                ],
+                "VpcEndpointId": "vpce-07e78aa3dc4c6f61d",
+                "VpcEndpointType": "Interface",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-0986d849c9291374e"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721/az/eu-central-1b",
+            "name": "eu-central-1b",
+            "type": "az",
+            "local_id": "eu-central-1b",
+            "node_data": {
+                "GroupName": "eu-central-1-zg-1",
+                "Messages": [],
+                "NetworkBorderGroup": "eu-central-1",
+                "OptInStatus": "opt-in-not-required",
+                "RegionName": "eu-central-1",
+                "State": "available",
+                "ZoneId": "euc1-az3",
+                "ZoneName": "eu-central-1b",
+                "ZoneType": "availability-zone"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws::eu-central-1:975050051976:subnet/subnet-090c2f3fc1f0c4f90",
+            "name": "public_az2 (10.0.4.0/22)",
+            "type": "subnet",
+            "local_id": "subnet-090c2f3fc1f0c4f90",
+            "node_data": {
+                "AssignIpv6AddressOnCreation": false,
+                "AvailabilityZone": "eu-central-1b",
+                "AvailabilityZoneId": "euc1-az3",
+                "AvailableIpAddressCount": 1018,
+                "BlockPublicAccessStates": {
+                    "InternetGatewayBlockMode": "off"
+                },
+                "CidrBlock": "10.0.4.0/22",
+                "DefaultForAz": false,
+                "EnableDns64": false,
+                "Ipv6CidrBlockAssociationSet": [],
+                "Ipv6Native": false,
+                "MapCustomerOwnedIpOnLaunch": false,
+                "MapPublicIpOnLaunch": false,
+                "OwnerId": "975050051976",
+                "PrivateDnsNameOptionsOnLaunch": {
+                    "EnableResourceNameDnsAAAARecord": false,
+                    "EnableResourceNameDnsARecord": false,
+                    "HostnameType": "ip-name"
+                },
+                "State": "available",
+                "SubnetArn": "arn:aws:ec2:eu-central-1:975050051976:subnet/subnet-090c2f3fc1f0c4f90",
+                "SubnetId": "subnet-090c2f3fc1f0c4f90",
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-internal-tools"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Name",
+                        "Value": "public_az2"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    }
+                ],
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721/az/eu-central-1b"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-090c2f3fc1f0c4f90",
+            "name": "external-tn-tools",
+            "type": "elbv2",
+            "local_id": "external-tn-tools",
+            "node_data": {
+                "AvailabilityZones": [
+                    {
+                        "LoadBalancerAddresses": [],
+                        "SubnetId": "subnet-07d5ffd5db4da2d5a",
+                        "ZoneName": "eu-central-1a"
+                    },
+                    {
+                        "LoadBalancerAddresses": [],
+                        "SubnetId": "subnet-090c2f3fc1f0c4f90",
+                        "ZoneName": "eu-central-1b"
+                    }
+                ],
+                "CanonicalHostedZoneId": "Z215JYRZR1TBD5",
+                "CreatedTime": "2024-06-06T13:29:03.270000+00:00",
+                "DNSName": "external-tn-tools-871201432.eu-central-1.elb.amazonaws.com",
+                "EnablePrefixForIpv6SourceNat": "off",
+                "IpAddressType": "ipv4",
+                "LoadBalancerArn": "arn:aws:elasticloadbalancing:eu-central-1:975050051976:loadbalancer/app/external-tn-tools/3d68241a4935b6de",
+                "LoadBalancerName": "external-tn-tools",
+                "Scheme": "internet-facing",
+                "SecurityGroups": [
+                    "sg-0beed24840a310e84"
+                ],
+                "State": {
+                    "Code": "active"
+                },
+                "Type": "application",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:subnet/subnet-090c2f3fc1f0c4f90"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "name": "dynamodb",
+            "type": "dynamodb",
+            "local_id": "vpce-0adf2523f60a280f2",
+            "node_data": {
+                "CreationTimestamp": "2024-05-30T11:52:28+00:00",
+                "DnsEntries": [],
+                "Groups": [],
+                "NetworkInterfaceIds": [],
+                "OwnerId": "975050051976",
+                "PolicyDocument": "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"*\",\"Resource\":\"*\"}]}",
+                "PrivateDnsEnabled": false,
+                "RequesterManaged": false,
+                "RouteTableIds": [
+                    "rtb-043c454e60c817273",
+                    "rtb-0c64f44d18da77cb4",
+                    "rtb-0e4ab77b3e0b8af98"
+                ],
+                "ServiceName": "com.amazonaws.eu-central-1.dynamodb",
+                "State": "available",
+                "SubnetIds": [],
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-internal-tools"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    }
+                ],
+                "VpcEndpointId": "vpce-0adf2523f60a280f2",
+                "VpcEndpointType": "Gateway",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "name": "s3",
+            "type": "s3",
+            "local_id": "vpce-08694567452de39ce",
+            "node_data": {
+                "CreationTimestamp": "2024-05-30T11:52:28+00:00",
+                "DnsEntries": [],
+                "Groups": [],
+                "NetworkInterfaceIds": [],
+                "OwnerId": "975050051976",
+                "PolicyDocument": "{\"Version\":\"2008-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"*\",\"Resource\":\"*\"}]}",
+                "PrivateDnsEnabled": false,
+                "RequesterManaged": false,
+                "RouteTableIds": [
+                    "rtb-043c454e60c817273",
+                    "rtb-0c64f44d18da77cb4",
+                    "rtb-0e4ab77b3e0b8af98"
+                ],
+                "ServiceName": "com.amazonaws.eu-central-1.s3",
+                "State": "available",
+                "SubnetIds": [],
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-internal-tools"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    }
+                ],
+                "VpcEndpointId": "vpce-08694567452de39ce",
+                "VpcEndpointType": "Gateway",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721"
+        }
+    },
+    {
+        "data": {
+            "id": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "name": "s3",
+            "type": "s3",
+            "local_id": "vpce-0910387074ef05461",
+            "node_data": {
+                "CreationTimestamp": "2024-07-19T09:49:00+00:00",
+                "DnsEntries": [],
+                "Groups": [],
+                "NetworkInterfaceIds": [],
+                "OwnerId": "975050051976",
+                "PolicyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"AllowAwsEcrS3Access\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"},\"Action\":\"s3:GetObject\",\"Resource\":\"arn:aws:s3:::prod-eu-central-1-starport-layer-bucket/*\"}]}",
+                "PrivateDnsEnabled": false,
+                "RequesterManaged": false,
+                "RouteTableIds": [],
+                "ServiceName": "com.amazonaws.eu-central-1.s3",
+                "State": "available",
+                "SubnetIds": [],
+                "Tags": [
+                    {
+                        "Key": "IaC_Project",
+                        "Value": "technative-workloads"
+                    },
+                    {
+                        "Key": "Company",
+                        "Value": "TechnativeBV"
+                    },
+                    {
+                        "Key": "Git_URL",
+                        "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                    },
+                    {
+                        "Key": "Stack",
+                        "Value": "shared"
+                    }
+                ],
+                "VpcEndpointId": "vpce-0910387074ef05461",
+                "VpcEndpointType": "Gateway",
+                "VpcId": "vpc-0fce2371516f3b721"
+            },
+            "parent": "arn:aws::eu-central-1:975050051976:vpc/vpc-0fce2371516f3b721"
+        }
+    },
+    {
+        "data": {
+            "id": "0.0.0.0/0",
+            "name": "Public",
+            "type": "cloud",
+            "local_id": "0.0.0.0/0",
+            "node_data": "0.0.0.0/0"
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-07d5ffd5db4da2d5a",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-090c2f3fc1f0c4f90",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-078662b50b38fbb9a",
+                    "GroupName": "terraform-20240530121745975200000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 5432,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5432,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 5433,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 5433,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-078662b50b38fbb9a",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_poormans_psql-975050051976"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Security group for nat-main-eu-central-1a NAT instances.",
+                    "GroupId": "sg-0e7c5b8f67a800d7a",
+                    "GroupName": "terraform-20240606132524252100000003",
+                    "IpPermissions": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "10.0.0.0/16"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0e7c5b8f67a800d7a",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Security group for nat-main-eu-central-1a NAT instances.",
+                    "GroupId": "sg-0e7c5b8f67a800d7a",
+                    "GroupName": "terraform-20240606132524252100000003",
+                    "IpPermissions": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "10.0.0.0/16"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0e7c5b8f67a800d7a",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Security group for nat-main-eu-central-1a NAT instances.",
+                    "GroupId": "sg-0e7c5b8f67a800d7a",
+                    "GroupName": "terraform-20240606132524252100000003",
+                    "IpPermissions": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "10.0.0.0/16"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0e7c5b8f67a800d7a",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "0.0.0.0/0",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-050b68c8fe09e8584",
+                    "GroupName": "terraform-20240606085609325700000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 6379,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 6379,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-050b68c8fe09e8584",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute1-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-050b68c8fe09e8584",
+                    "GroupName": "terraform-20240606085609325700000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 6379,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 6379,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-050b68c8fe09e8584",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute1-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-050b68c8fe09e8584",
+                    "GroupName": "terraform-20240606085609325700000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 6379,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 6379,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-050b68c8fe09e8584",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute1-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-050b68c8fe09e8584",
+                    "GroupName": "terraform-20240606085609325700000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 6379,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 6379,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-050b68c8fe09e8584",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute1-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-050b68c8fe09e8584",
+                    "GroupName": "terraform-20240606085609325700000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 6379,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 6379,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-050b68c8fe09e8584",
+                    "Tags": [
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute1-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "0.0.0.0/0",
+            "target": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-04c98253e6566c6a2",
+                    "GroupName": "terraform-20240613083216612900000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 7000,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 7070,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-04c98253e6566c6a2",
+                    "Tags": [
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute2-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-04c98253e6566c6a2",
+                    "GroupName": "terraform-20240613083216612900000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 7000,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 7070,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-04c98253e6566c6a2",
+                    "Tags": [
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute2-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-04c98253e6566c6a2",
+                    "GroupName": "terraform-20240613083216612900000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 7000,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 7070,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-04c98253e6566c6a2",
+                    "Tags": [
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute2-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-04c98253e6566c6a2",
+                    "GroupName": "terraform-20240613083216612900000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 7000,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 7070,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-04c98253e6566c6a2",
+                    "Tags": [
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute2-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Managed by Terraform",
+                    "GroupId": "sg-04c98253e6566c6a2",
+                    "GroupName": "terraform-20240613083216612900000002",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 8080,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 8080,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 7000,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 7070,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 22,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 22,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-04c98253e6566c6a2",
+                    "Tags": [
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-workloads"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Domain",
+                            "Value": "ec2_compute2-975050051976"
+                        },
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "0.0.0.0/0",
+            "target": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-07d5ffd5db4da2d5a",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Shared ALB ecurity group.",
+                    "GroupId": "sg-0beed24840a310e84",
+                    "GroupName": "shared-alb-sg",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0beed24840a310e84",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "shared-alb-sg"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Shared ALB ecurity group.",
+                    "GroupId": "sg-0beed24840a310e84",
+                    "GroupName": "shared-alb-sg",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0beed24840a310e84",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "shared-alb-sg"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "0.0.0.0/0",
+            "target": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-090c2f3fc1f0c4f90",
+            "type": "edge",
+            "node_data": [
+                {
+                    "Description": "Shared ALB ecurity group.",
+                    "GroupId": "sg-0beed24840a310e84",
+                    "GroupName": "shared-alb-sg",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0beed24840a310e84",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "shared-alb-sg"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                },
+                {
+                    "Description": "Shared ALB ecurity group.",
+                    "GroupId": "sg-0beed24840a310e84",
+                    "GroupName": "shared-alb-sg",
+                    "IpPermissions": [
+                        {
+                            "FromPort": 80,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 80,
+                            "UserIdGroupPairs": []
+                        },
+                        {
+                            "FromPort": 443,
+                            "IpProtocol": "tcp",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "ToPort": 443,
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "IpPermissionsEgress": [
+                        {
+                            "IpProtocol": "-1",
+                            "IpRanges": [
+                                {
+                                    "CidrIp": "0.0.0.0/0"
+                                }
+                            ],
+                            "Ipv6Ranges": [],
+                            "PrefixListIds": [],
+                            "UserIdGroupPairs": []
+                        }
+                    ],
+                    "OwnerId": "975050051976",
+                    "SecurityGroupArn": "arn:aws:ec2:eu-central-1:975050051976:security-group/sg-0beed24840a310e84",
+                    "Tags": [
+                        {
+                            "Key": "Git_URL",
+                            "Value": "https://github.com/TechNative-B-V/technative-awsaccounts-workloads.git"
+                        },
+                        {
+                            "Key": "Name",
+                            "Value": "shared-alb-sg"
+                        },
+                        {
+                            "Key": "Company",
+                            "Value": "TechnativeBV"
+                        },
+                        {
+                            "Key": "Stack",
+                            "Value": "shared"
+                        },
+                        {
+                            "Key": "IaC_Project",
+                            "Value": "technative-internal-tools"
+                        }
+                    ],
+                    "VpcId": "vpc-0fce2371516f3b721"
+                }
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-07d5ffd5db4da2d5a",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-090c2f3fc1f0c4f90",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0adf2523f60a280f2",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-07d5ffd5db4da2d5a",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-090c2f3fc1f0c4f90",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-08694567452de39ce",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-01050d2791f739e2d",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/ec2-asg-nat-main-eu-central-1a",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-06e9e4a9d0f638964",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-07d5ffd5db4da2d5a",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:ec2:eu-central-1:975050051976:instance/i-0ba9b0b568169fa71",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    },
+    {
+        "data": {
+            "source": "arn:aws:elasticloadbalancingv2:eu-central-1:975050051976:instance/external-tn-tools/eu-central-1.subnet-090c2f3fc1f0c4f90",
+            "target": "arn:aws:endpoint:eu-central-1:975050051976:instance/vpce-0910387074ef05461",
+            "type": "edge",
+            "node_data": [
+                []
+            ]
+        }
+    }
+]
