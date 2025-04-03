@@ -1,6 +1,6 @@
 # CHANGELOG.md
 
-## v1.1.0 Dark Mode
+## v1.1.0 Dark Mode - 3 april 2025
 
 - Add dark mode templates.
 
@@ -8,6 +8,3 @@
 
 - Create templates and symbols
 - Create make script
-
-
-
