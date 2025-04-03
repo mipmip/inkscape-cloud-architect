@@ -13,6 +13,8 @@ Make Inkscape a professional Cloud Visualization Studio for Cloud Architects.
 
 ![Multi AZ Web Application Template](docs/images/multi-az-webapp-tpl-v2.png)
 
+![Dark mode template](docs/images/AWS-dark-mode-template.png)
+
 ## Install
 
 Clone repo.
