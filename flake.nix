@@ -5,11 +5,27 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs }: 
+    let
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+      
+      pythonWithInkex = pkgs.python3.withPackages (ps: with ps; [
+        inkex
+      ]);
+    in {
+      packages.${system}.hello = pkgs.hello;
+      packages.${system}.default = self.packages.${system}.hello;
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
-  };
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = [
+          pythonWithInkex
+        ];
+        
+        shellHook = ''
+          echo "Inkscape Cloud Architect development environment"
+          echo "Python with inkex module is available"
+        '';
+      };
+    };
 }
