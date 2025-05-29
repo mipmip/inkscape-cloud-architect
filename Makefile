@@ -16,13 +16,13 @@ clean-symbols:
 	rm -Rfv $(INKSCAPE_DIR)/symbols/aws-architect
 
 clean-awslab-repo-cache:
-	rm -Rfv ./aws-inkscape-symbols/awslabs-repo
+	rm -Rfv ./symbols/aws-inkscape-symbols/awslabs-repo
 
 install-symbols:
-	rsync -av ./aws-inkscape-symbols/target/ $(INKSCAPE_DIR)/symbols/aws-architect/
+	rsync -av ./symbols/aws-inkscape-symbols/target/ $(INKSCAPE_DIR)/symbols/aws-architect/
 
 install-templates:
 	rsync -av templates/ $(INKSCAPE_DIR)/templates/aws-architect/
 
 build-symbols:
-	cd ./aws-inkscape-symbols; ./build.sh $(ASSETS_ZIP)
+	cd ./symbols/aws-inkscape-symbols; ./build.sh $(ASSETS_ZIP)

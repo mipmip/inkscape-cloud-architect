@@ -34,7 +34,7 @@ class aws_auto_diagram(inkex.EffectExtension):
         use_element.transform = use_element.transform @ origin_translate
 
 
-    def effect(self):
+    def effect2(self):
 
         config_data = jsonloader.load_json_file('/home/pim/cInkscape/inkscape-cloud-architect/aws-auto-diagram/test-data.json')
         if config_data:
@@ -71,7 +71,7 @@ class aws_auto_diagram(inkex.EffectExtension):
 
         symbol = Symbol.new("virtual-private-network-vpc.svg")
 
-    def effect2(self):
+    def effect(self):
 
         #create layer
         layer = self.svg.add(Group.new('my_label', is_layer=True))
