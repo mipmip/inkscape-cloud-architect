@@ -100,6 +100,7 @@ class aws_auto_diagram(inkex.EffectExtension):
                 self.render_vpc();
 
 
+    def doc_symbols(self):
         symbol_id_list = self.make_symbol_id_list()
         debug(symbol_id_list)
 
@@ -120,32 +121,49 @@ class aws_auto_diagram(inkex.EffectExtension):
         self.symbol_test()
         self.shape_test()
 
+    def import_defs_from_external_file_in_document(self):
+        svg_file_path = "/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg"
+        external_svg = inkex.load_svg(svg_file_path)
+
+
+
+
     def import_external_svg_in_document(self):
         svg_file_path = "/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg"
-        
+
         try:
             # Load the external SVG file using inkex
             external_svg = inkex.load_svg(svg_file_path)
-            
+            debug(external_svg)
+
             if external_svg:
                 debug(f"Successfully loaded SVG from {svg_file_path}")
-                
+
                 # Get the current layer
                 current_layer = self.svg.get_current_layer()
-                
+                debug(current_layer)
+
                 # Import the SVG content into the current document
                 # Extract elements from the root and add them to our document
                 for element in external_svg.getroot():
+                    debug(current_layer)
                     # Skip metadata, defs, etc. - only import visible elements
+
+                    # Clone the element to avoid reference issues
+                    imported_element = element.copy()
+                    current_layer.append(imported_element)
+                    debug(f"Imported element: {element.tag}")
+
+
                     if element.tag.endswith('}g') or element.tag.endswith('}path') or \
                        element.tag.endswith('}rect') or element.tag.endswith('}circle') or \
                        element.tag.endswith('}ellipse') or element.tag.endswith('}polygon'):
-                        
+
                         # Clone the element to avoid reference issues
                         imported_element = element.copy()
                         current_layer.append(imported_element)
                         debug(f"Imported element: {element.tag}")
-                
+
                 debug("SVG import completed")
             else:
                 debug(f"Failed to load SVG from {svg_file_path}")
@@ -153,7 +171,7 @@ class aws_auto_diagram(inkex.EffectExtension):
             debug(f"Error importing SVG: {str(e)}")
 
     def effect(self):
-        self.import_external_svg_in_document()
+        self.import_defs_from_file_current_document()
 
 
 if __name__ == '__main__':
