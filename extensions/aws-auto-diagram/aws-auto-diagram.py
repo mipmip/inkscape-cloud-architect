@@ -126,40 +126,40 @@ class aws_auto_diagram(inkex.EffectExtension):
         try:
             # Load the external SVG file using inkex
             external_svg = inkex.load_svg(svg_file_path)
-            
+
             if external_svg:
                 debug(f"Successfully loaded SVG from {svg_file_path}")
-                
+
                 # Find the defs section in the external SVG
                 external_defs = external_svg.getroot().find('{http://www.w3.org/2000/svg}defs')
-                
+
                 if external_defs is not None:
                     # Find all symbol elements in the external defs
                     external_symbols = external_defs.findall('{http://www.w3.org/2000/svg}symbol')
-                    
+
                     if external_symbols:
                         debug(f"Found {len(external_symbols)} symbols in external SVG")
-                        
+
                         # Get or create the defs section in the current document
                         if self.svg.defs is None:
                             self.svg.defs = self.svg.getroot().add(inkex.elements._defs.Defs())
-                        
+
                         # Copy each symbol to the current document's defs
                         for symbol in external_symbols:
                             # Create a copy of the symbol
                             symbol_copy = symbol.copy()
-                            
+
                             # Check if a symbol with the same ID already exists
                             symbol_id = symbol.get('id')
                             existing_symbols = self.svg.defs.findall(f".//*[@id='{symbol_id}']")
-                            
+
                             if not existing_symbols:
                                 # Add the symbol to the current document's defs
                                 self.svg.defs.append(symbol_copy)
                                 debug(f"Imported symbol: {symbol_id}")
                             else:
                                 debug(f"Symbol {symbol_id} already exists in document, skipping")
-                        
+
                         debug("Symbol import completed")
                     else:
                         debug("No symbols found in external SVG")
@@ -170,51 +170,9 @@ class aws_auto_diagram(inkex.EffectExtension):
         except Exception as e:
             debug(f"Error importing symbols: {str(e)}")
 
-
-    def import_external_svg_in_document(self):
-        svg_file_path = "/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg"
-
-        try:
-            # Load the external SVG file using inkex
-            external_svg = inkex.load_svg(svg_file_path)
-            debug(external_svg)
-
-            if external_svg:
-                debug(f"Successfully loaded SVG from {svg_file_path}")
-
-                # Get the current layer
-                current_layer = self.svg.get_current_layer()
-                debug(current_layer)
-
-                # Import the SVG content into the current document
-                # Extract elements from the root and add them to our document
-                for element in external_svg.getroot():
-                    debug(current_layer)
-                    # Skip metadata, defs, etc. - only import visible elements
-
-                    # Clone the element to avoid reference issues
-                    imported_element = element.copy()
-                    current_layer.append(imported_element)
-                    debug(f"Imported element: {element.tag}")
-
-
-                    if element.tag.endswith('}g') or element.tag.endswith('}path') or \
-                       element.tag.endswith('}rect') or element.tag.endswith('}circle') or \
-                       element.tag.endswith('}ellipse') or element.tag.endswith('}polygon'):
-
-                        # Clone the element to avoid reference issues
-                        imported_element = element.copy()
-                        current_layer.append(imported_element)
-                        debug(f"Imported element: {element.tag}")
-
-                debug("SVG import completed")
-            else:
-                debug(f"Failed to load SVG from {svg_file_path}")
-        except Exception as e:
-            debug(f"Error importing SVG: {str(e)}")
-
     def effect(self):
-        self.import_defs_from_external_file_in_document()
+        #self.import_defs_from_external_file_in_document()
+        self.doc_symbols()
 
 
 if __name__ == '__main__':
