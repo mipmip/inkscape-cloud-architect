@@ -122,9 +122,31 @@ class aws_auto_diagram(inkex.EffectExtension):
 
     def import_external_svg_in_document(self):
         svg_file_path = "/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg"
+        # Load the external SVG file
+        external_svg = jsonloader.load_svg_file(svg_file_path)
+        
+        if external_svg:
+            debug(f"Successfully loaded SVG from {svg_file_path}")
+            
+            # Get the current layer or create one if it doesn't exist
+            current_layer = self.svg.get_current_layer()
+            
+            # Import the SVG content into the current document
+            # We need to extract the root element's children and add them to our document
+            for element in external_svg.getroot():
+                # Skip metadata, defs, etc. - only import visible elements
+                if element.tag.endswith('}g') or element.tag.endswith('}path') or element.tag.endswith('}rect'):
+                    # Clone the element to avoid reference issues
+                    imported_element = element.copy()
+                    current_layer.append(imported_element)
+                    debug(f"Imported element: {element.tag}")
+            
+            debug("SVG import completed")
+        else:
+            debug(f"Failed to load SVG from {svg_file_path}")
 
     def effect(self):
-        import_external_svg_in_document();
+        self.import_external_svg_in_document()
 
 
 if __name__ == '__main__':
