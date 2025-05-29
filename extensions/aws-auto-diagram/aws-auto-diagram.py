@@ -69,9 +69,6 @@ class aws_auto_diagram(inkex.EffectExtension):
 
     def make_symbol_id_list(self):
 
-        # Get a list of all symbols contained in defs
-        symbolsvg = jsonloader.load_svg_file("/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg")
-        #debug(symbolsvg)
 
         symbol_list = self.svg.defs.xpath('svg:symbol')
         if len(symbol_list) < 1:
@@ -109,18 +106,25 @@ class aws_auto_diagram(inkex.EffectExtension):
         for symbol_id in symbol_id_list:
             self.make_symbol_instance(symbol_id, self.svg.get_current_layer())
 
-    def effect(self):
+    def nicetry(self):
+        # Get a list of all symbols contained in defs
+        symbolsvg = jsonloader.load_svg_file("/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg")
+        #debug(symbolsvg)
+
+    def this_works(self):
         self.parse_test_data()
+        self.render_vpc()
+        self.delete_all()
+        self.rect()
+        self.remote_json_test()
+        self.symbol_test()
+        self.shape_test()
 
-#        self.render_vpc()
-#        self.delete_all()
-#        self.rect()
-#        self.remote_json_test()
-#        self.symbol_test()
-#        self.shape_test()
+    def import_external_svg_in_document(self):
+        svg_file_path = "/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg"
 
-
-
+    def effect(self):
+        import_external_svg_in_document();
 
 
 if __name__ == '__main__':
