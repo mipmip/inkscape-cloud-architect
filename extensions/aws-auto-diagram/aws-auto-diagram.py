@@ -6,7 +6,6 @@ import os
 import jsonloader
 import requests
 
-
 LOGFILE = True
 def debug(var):
     if LOGFILE:
@@ -172,7 +171,8 @@ class aws_auto_diagram(inkex.EffectExtension):
 
     def effect(self):
         #self.import_defs_from_external_file_in_document()
-        self.doc_symbols()
+        #self.doc_symbols()
+        self.parse_test_data()
 
 
 if __name__ == '__main__':
