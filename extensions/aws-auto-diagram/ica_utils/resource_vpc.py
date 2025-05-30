@@ -16,7 +16,6 @@ def aws_rect(inkdoc, xy, wh, color, name, symid):
     tr = Transform(f'translate({xy[0]}, {xy[1]}) scale(0.275)')
     icon_el.transform = tr
 
-    """Add a text label at the given location"""
     elem = TextElement(x=str(xy[0]+15), y=str(xy[1]+8))
     elem.text = str(name)
     elem.style = {
@@ -41,7 +40,7 @@ def render_subnet(inkdoc, props):
 
     if "private" not in name:
 
-        aws_rect(inkdoc, [20,40], [160, 50], COLOR_GREEN, name,
+        aws_rect(inkdoc, [20,30], [160, 50], COLOR_GREEN, name,
                  "AWS-Group-light.svg:public-subnet.svg")
 
     else:
