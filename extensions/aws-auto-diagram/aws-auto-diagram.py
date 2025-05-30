@@ -3,33 +3,22 @@ from inkex.elements import Rectangle, Group, PathElement, Line, Symbol
 from inkex import Use, Transform
 import json
 import os
-import jsonloader
+from ica_utils import jsonloader
+from ica_utils import resource_vpc
+from pathlib import Path
 import requests
-
-LOGFILE = True
-def debug(var):
-    if LOGFILE:
-        with open("/tmp/aws-auto-diagram.log", "a") as text_file:
-            text_file.write(str(var))
-            text_file.write("\n")
-    else:
-        inkex.errormsg((var))
-
+from ica_utils.icalog import debug
 
 class aws_auto_diagram(inkex.EffectExtension):
 
-    def render_vpc(self):
-        rect = Rectangle.new(10, 10, 300, 200)  # (x, y, width, height)
-        rect.style = {"fill": "none", "stroke-width": 0.5, "stroke": "purple"}
-        # Add to the SVG document
-        self.svg.append(rect)
-
+    # move to example
     def rect(self):
         rect = Rectangle.new(100, 100, 100, 100)  # (x, y, width, height)
         rect.style = {"fill": "blue", "stroke": "yellow"}
         # Add to the SVG document
         self.svg.append(rect)
 
+    # move to example
     def shape_test(self):
         layer = self.svg.add(Group.new('my_label', is_layer=True))
         #create shape
@@ -47,28 +36,22 @@ class aws_auto_diagram(inkex.EffectExtension):
         line1 = layer.add(Line(x1='0', y1= '0', x2='100', y2='100'))
         line1.style = {'stroke-width': 3, 'stroke': 'blue'}
 
-
+    # not working
     def delete_all(self):
         debug("DELETE ALL")
         for node in self.svg.xpath('//svg:path'):
             debug(node)
             node.delete()
 
+    # move to example
     def remote_json_test(self):
         debug("remote_json_test")
         response = requests.get('https://api.restful-api.dev/objects')
         data = response.json()
         debug(data)
 
-    def symbol_test(self):
-        debug("symbol test")
-        symbol = Symbol.new("virtual-private-network-vpc.svg")
-        debug(symbol)
-
-
+    # move to example
     def make_symbol_id_list(self):
-
-
         symbol_list = self.svg.defs.xpath('svg:symbol')
         if len(symbol_list) < 1:
             debug('No Symbols Found In Document')
@@ -77,6 +60,7 @@ class aws_auto_diagram(inkex.EffectExtension):
             symbol_id_list = [x.get_id() for x in symbol_list]
             return symbol_id_list
 
+    ## MOVE TO utils
     def make_symbol_instance(self, symbol_id, parent):
         use_element = Use()
         use_element.set('xlink:href', f'#{symbol_id}')
@@ -88,17 +72,23 @@ class aws_auto_diagram(inkex.EffectExtension):
         origin_translate = -Transform().add_translate(bbox.left, bbox.top)
         use_element.transform = use_element.transform @ origin_translate
 
+        return use_element
+
     def parse_test_data(self):
         config_data = jsonloader.load_json_file('/home/pim/.config/inkscape/extensions/aws-auto-diagram/test-data.json')
         if config_data:
 
             vpcs = list(filter(lambda node: node['data']['type'] == 'vpc', config_data))
-            debug(vpcs)
+            subnets = list(filter(lambda node: node['data']['type'] == 'subnet', config_data))
+            debug(subnets)
 
             for vpc in vpcs:
-                self.render_vpc();
+                resource_vpc.render_vpc(self);
 
+            for subnet in subnets:
+                resource_vpc.render_subnet(self, subnet);
 
+    # move to example
     def doc_symbols(self):
         symbol_id_list = self.make_symbol_id_list()
         debug(symbol_id_list)
@@ -106,22 +96,20 @@ class aws_auto_diagram(inkex.EffectExtension):
         for symbol_id in symbol_id_list:
             self.make_symbol_instance(symbol_id, self.svg.get_current_layer())
 
-    def nicetry(self):
-        # Get a list of all symbols contained in defs
-        symbolsvg = jsonloader.load_svg_file("/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg")
-        #debug(symbolsvg)
-
     def this_works(self):
         self.parse_test_data()
-        self.render_vpc()
+        #self.render_vpc()
         self.delete_all()
         self.rect()
         self.remote_json_test()
-        self.symbol_test()
         self.shape_test()
 
     def import_defs_from_external_file_in_document(self):
-        svg_file_path = "/home/pim/.config/inkscape/symbols/aws-architect/AWS-Group-light.svg"
+
+        symbol_group = "AWS-Group-light.svg"
+        inkhome = str(Path.home()) + "/.config/inkscape"
+        svg_file_path = f"{inkhome}/symbols/aws-architect/{symbol_group}"
+
         try:
             # Load the external SVG file using inkex
             external_svg = inkex.load_svg(svg_file_path)
@@ -150,12 +138,15 @@ class aws_auto_diagram(inkex.EffectExtension):
 
                             # Check if a symbol with the same ID already exists
                             symbol_id = symbol.get('id')
-                            existing_symbols = self.svg.defs.findall(f".//*[@id='{symbol_id}']")
+                            symbol_dest_id = f"{symbol_group}:{symbol_id}"
+                            symbol_copy.set('id',symbol_dest_id)
+                            symbol_copy_id = symbol_copy.get("id")
+                            existing_symbols = self.svg.defs.findall(f".//*[@id='{symbol_dest_id}']")
 
                             if not existing_symbols:
                                 # Add the symbol to the current document's defs
                                 self.svg.defs.append(symbol_copy)
-                                debug(f"Imported symbol: {symbol_id}")
+                                debug(f"Imported symbol: {symbol_id} > {symbol_copy_id}")
                             else:
                                 debug(f"Symbol {symbol_id} already exists in document, skipping")
 
@@ -170,7 +161,7 @@ class aws_auto_diagram(inkex.EffectExtension):
             debug(f"Error importing symbols: {str(e)}")
 
     def effect(self):
-        #self.import_defs_from_external_file_in_document()
+        self.import_defs_from_external_file_in_document()
         #self.doc_symbols()
         self.parse_test_data()
 

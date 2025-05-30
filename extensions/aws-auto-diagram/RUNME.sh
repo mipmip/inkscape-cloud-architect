@@ -13,6 +13,6 @@ install(){
 make_command "auto_install" "auto install while developing"
 auto_install(){
   echo "Auto installing. Press CTRL-C to quit."
-  ls * | entr cp -av ../aws-auto-diagram ~/.config/inkscape/extensions/
+  find | entr cp -av ../aws-auto-diagram ~/.config/inkscape/extensions/
 }
 runme
